@@ -15,7 +15,7 @@ DotsIndicator carouselIndicator(BuildContext context, index) {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(2),
       ),
-      activeColor: ColorConstants.secondaryYellow,
+      activeColor: ColorConstants.yellow,
       activeSize: const Size(20, 4),
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(2),

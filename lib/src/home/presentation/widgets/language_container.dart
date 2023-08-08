@@ -25,7 +25,7 @@ class LanguageContainer extends StatelessWidget {
     return Container(
         height: 50,
         alignment: Alignment.center,
-        color: ColorConstants.primaryBlue,
+        color: ColorConstants.violet,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

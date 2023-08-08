@@ -26,10 +26,14 @@ class BottomNavBar extends StatelessWidget {
                     children: [
                       Image.asset(
                         "${imagePath}support.png",
+                        height: 25,
                       ),
                       const Text(
                         'Support',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontSize: 16),
                       ),
                     ],
                   ))),
@@ -46,10 +50,14 @@ class BottomNavBar extends StatelessWidget {
                       const SizedBox(height: 8),
                       Image.asset(
                         "${imagePath}register.png",
+                        height: 25,
                       ),
                       const Text(
                         'Register',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16),
                       ),
                     ],
                   ))),
@@ -63,11 +71,18 @@ class BottomNavBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(image),
+        Image.asset(
+          image,
+          height: 30,
+        ),
         const SizedBox(width: 8),
         Text(
           title,
-          style: const TextStyle(color: Colors.white, fontSize: 16),
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ],
     );
@@ -80,7 +95,7 @@ class ShapePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     const gradient = LinearGradient(
-      colors: [ColorConstants.primaryYellow, ColorConstants.secondaryYellow],
+      colors: [ColorConstants.yellowMain, ColorConstants.yellow],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
     );
@@ -112,7 +127,7 @@ class ShapePainterRight extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     const gradient = LinearGradient(
-      colors: [ColorConstants.primaryYellow, ColorConstants.secondaryYellow],
+      colors: [ColorConstants.yellowMain, ColorConstants.yellow],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
     );
@@ -147,12 +162,13 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       mini: true,
-      backgroundColor: ColorConstants.primaryYellow,
+      backgroundColor: ColorConstants.yellowMain,
       foregroundColor: Colors.black,
-      onPressed: () {
-        // Handle FAB press
-      },
-      child: const Icon(Icons.add),
+      onPressed: () {},
+      child: const Icon(
+        Icons.add,
+        size: 35,
+      ),
     );
   }
 }

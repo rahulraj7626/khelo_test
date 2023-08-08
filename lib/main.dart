@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: providerList,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Khelo App',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

@@ -20,7 +20,7 @@ class Header extends StatelessWidget {
             shaderCallback: (Rect bounds) {
               return const LinearGradient(
                 colors: [
-                  ColorConstants.secondaryYellow,
+                  ColorConstants.yellow,
                   Colors.white,
                 ],
                 begin: Alignment.topCenter,
@@ -39,7 +39,7 @@ class Header extends StatelessWidget {
           Divider(
             indent: MediaQuery.of(context).size.width / 3,
             endIndent: MediaQuery.of(context).size.width / 3,
-            color: ColorConstants.primaryYellow,
+            color: ColorConstants.yellowMain,
             thickness: 2,
           )
         ],
@@ -52,7 +52,7 @@ Padding divider() {
   return const Padding(
     padding: EdgeInsets.symmetric(vertical: 20),
     child: Divider(
-      color: ColorConstants.primaryYellow,
+      color: ColorConstants.yellowMain,
       endIndent: 200,
       thickness: 3,
     ),
