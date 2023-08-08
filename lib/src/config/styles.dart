@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'constants/color_constants.dart';
 
 TextStyle yellowTextStyle = const TextStyle(
-  color: ColorConstants.primaryYellow,
+  color: ColorConstants.yellowMain,
   fontSize: 10,
   fontWeight: FontWeight.w500,
 );
 TextStyle yellowTextStyle15 = const TextStyle(
-  color: ColorConstants.primaryYellow,
+  color: ColorConstants.yellowMain,
   fontSize: 15,
   fontWeight: FontWeight.w500,
 );
 TextStyle yellowTextStyle14 = const TextStyle(
-  color: ColorConstants.secondaryYellow,
+  color: ColorConstants.yellowMain,
   fontSize: 14,
   fontWeight: FontWeight.w500,
 );
@@ -36,16 +36,16 @@ LinearGradient linearGradient = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.topRight,
   colors: [
-    ColorConstants.secondaryYellow,
+    ColorConstants.yellow,
     Colors.white,
-    ColorConstants.primaryYellow,
+    ColorConstants.yellowMain,
   ],
 );
 LinearGradient loginLinearGradient = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.topRight,
   colors: [
-    ColorConstants.primaryYellow,
-    ColorConstants.secondaryYellow,
+    ColorConstants.yellowMain,
+    ColorConstants.yellow,
   ],
 );

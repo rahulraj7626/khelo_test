@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:khelo_test/src/home/data/models/users_model.dart';
 
 import '../../../config/constants/color_constants.dart';
 import '../../../config/constants/string_constants.dart';
 import '../../../config/styles.dart';
+import '../../data/datasources/user_list.dart';
 
 class UserList extends StatelessWidget {
   const UserList({
@@ -30,15 +32,15 @@ class UserList extends StatelessWidget {
           crossAxisCount: 2,
           childAspectRatio: (MediaQuery.of(context).size.width / 2) / 80,
         ),
-        itemCount: 4,
+        itemCount: userList.length,
         itemBuilder: (BuildContext context, int index) {
-          return userCard();
+          return userCard(userList[index]);
         },
       ),
     );
   }
 
-  Container userCard() {
+  Container userCard(UserData data) {
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 0),
@@ -48,7 +50,7 @@ class UserList extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: ColorConstants.secondaryYellow,
+                color: ColorConstants.yellow,
                 width: 4.0,
               ),
             ),
@@ -60,17 +62,16 @@ class UserList extends StatelessWidget {
           contentPadding: EdgeInsets.zero,
           minLeadingWidth: 0,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(Strings.pranoy, style: whiteTextStyle12),
-              Text("₹", style: yellowTextStyle14),
-              Text("12345", style: whiteTextStyle12)
+              Text(data.name, style: whiteTextStyle12),
+              Text(" ₹", style: yellowTextStyle14),
+              Text(data.amount, style: whiteTextStyle12)
             ],
           ),
-          subtitle: const Text(
-            Strings.sec2,
-            style: TextStyle(
-              color: ColorConstants.secondaryYellow,
+          subtitle: Text(
+            '${data.sec}${Strings.sec2}',
+            style: const TextStyle(
+              color: ColorConstants.yellow,
               fontSize: 10,
               fontWeight: FontWeight.w500,
             ),

@@ -30,7 +30,7 @@ class GameListWidget extends StatelessWidget {
                     height: 40,
                     width: 10,
                     decoration: BoxDecoration(
-                        color: ColorConstants.primaryYellow,
+                        color: ColorConstants.yellowMain,
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   const SizedBox(
@@ -47,7 +47,7 @@ class GameListWidget extends StatelessWidget {
                       // provider.toggleShowMore();
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorConstants.primaryYellow,
+                      backgroundColor: ColorConstants.yellowMain,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
@@ -76,7 +76,7 @@ class GameListWidget extends StatelessWidget {
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
-                            width: 2, color: ColorConstants.primaryYellow)),
+                            width: 2, color: ColorConstants.yellowMain)),
                     margin: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 15),
                     child: Column(
@@ -101,20 +101,20 @@ class GameListWidget extends StatelessWidget {
   Container cardBottomWidget() {
     return Container(
       height: 20,
-      color: ColorConstants.primaryBlue,
+      color: ColorConstants.violet,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("Min", style: whiteTextStyle12),
-          Text("₹", style: yellowTextStyle14),
-          Text("100", style: whiteTextStyle12),
+          Text(" ₹", style: yellowTextStyle14),
+          Text("10", style: whiteTextStyle12),
           Text(
-            "|",
+            " | ",
             style: yellowTextStyle14,
           ),
           Text("Max", style: whiteTextStyle12),
-          Text("₹", style: yellowTextStyle14),
-          Text("100", style: whiteTextStyle12),
+          Text(" ₹", style: yellowTextStyle14),
+          Text("100k", style: whiteTextStyle12),
         ],
       ),
     );
